@@ -7,16 +7,8 @@ public class Main {
 		Calculator calc = Calculator.instance.get();
 		int a = calc.plus.apply(1, 2);
 		int b = calc.minus.apply(1,1);
-		int c;
-		try {
-			c = calc.devide.apply(a, b);
-			calc.println.accept(c);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("На ноль делить нельзя");
-		}
-		
+		int c= calc.devide.apply(a, b); //при делении на 0 будет ошибка
+		calc.println.accept(c);
 	}
 
 }
